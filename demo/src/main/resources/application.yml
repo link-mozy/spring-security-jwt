@@ -11,3 +11,4 @@ spring:
 
 jwt:
   secret: fdjkasljfkdlasjkfljdkajfkdlasjkfljkasljfkldjsakljfkdlasjfklsljfkldasjklfjdkasljfkldasjkl
+  jwtExpirationInMs: 18000000
