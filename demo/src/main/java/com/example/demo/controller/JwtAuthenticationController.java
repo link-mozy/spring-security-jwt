@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.Model.JwtRequest;
 import com.example.demo.Model.JwtResponse;
+import com.example.demo.Model.UserDTO;
 import com.example.demo.config.JwtTokenUtil;
 import com.example.demo.service.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,11 @@ public class JwtAuthenticationController {
         final String token = jwtTokenUtil.generateToken(userDetails);
 
         return ResponseEntity.ok(new JwtResponse(token));
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity saveUser(@RequestBody UserDTO user) throws Exception {
+        return ResponseEntity.ok(userDetailsService.save(user));
     }
 
     private void authenticate(String username, String password) throws Exception {
