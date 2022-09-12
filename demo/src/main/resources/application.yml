@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/test
+    username: root
+    password: m4ri4db
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: fdjkasljfkdlasjkfljdkajfkdlasjkfljkasljfkldjsakljfkdlasjfklsljfkldasjklfjdkasljfkldasjkl
